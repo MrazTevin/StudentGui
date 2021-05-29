@@ -1,6 +1,7 @@
 package com.codewithTev;
 
 import javax.swing.*;
+import java.sql.SQLException;
 
 public class StudentGui {
     private JPanel StudentForm;
@@ -14,5 +15,10 @@ public class StudentGui {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
+    }
+
+    public static void main (String [] args) throws SQLException {
+        ConnectDb testConnection = new ConnectDb();
+        testConnection.connection();
     }
 }

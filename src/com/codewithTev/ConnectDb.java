@@ -24,10 +24,6 @@ public class ConnectDb {
         }
 
 
-        Connection con = null;
-        PreparedStatement pst = null;
-        ResultSet rs = null;
-
 
 
 }

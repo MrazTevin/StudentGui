@@ -15,11 +15,14 @@ public class StudentGui {
     private JButton SAVEButton;
     private JButton DELETEButton;
 
+
+
     public StudentGui() {
         SAVEButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                InsertData newData = new InsertData();
+                newData.insertDetails();
             }
         });
     }

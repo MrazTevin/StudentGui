@@ -1,6 +1,8 @@
 package com.codewithTev;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
 public class StudentGui {
@@ -12,6 +14,15 @@ public class StudentGui {
     private JTextField textField5;
     private JButton SAVEButton;
     private JButton DELETEButton;
+
+    public StudentGui() {
+        SAVEButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        });
+    }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here

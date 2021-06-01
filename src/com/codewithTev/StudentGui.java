@@ -33,18 +33,7 @@ public class StudentGui {
                             + "VALUES (?,?,?,?,?)";
                     con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Students", "postgres", "root");
                     pst = con.prepareStatement(sql);
-                    TextComponent regno = null;
-                    pst.setString(1,regno.getText());
-                    TextComponent first_name = null;
-                    pst.setString(2,first_name.getText());
-                    TextComponent last_name = null;
-                    pst.setString(3,last_name.getText());
-                    TextComponent role = null;
-                    pst.setString(4,role.getText());
-                    TextComponent department = null;
-                    pst.setString(5,department.getText());
-                    pst.executeUpdate();
-                    JOptionPane.showMessageDialog(null,"inserted successfully");
+
 
                 }
                 catch(Exception ex) {

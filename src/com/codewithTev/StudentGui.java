@@ -33,7 +33,19 @@ public class StudentGui {
                             + "VALUES (?,?,?,?,?)";
                     con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Students", "postgres", "root");
                     pst = con.prepareStatement(sql);
-
+                    StudentInfo si = new StudentInfo();
+                    si.setRegno(Integer.parseInt(textField1.getText()));
+                    si.setFirst_name(textField2.getText());
+                    si.setLast_name(textField3.getText());
+                    si.setRole(textField4.getText());
+                    si.setRole(textField5.getText());
+                    pst.setInt(1,si.getRegno());
+                    pst.setString(2,si.getFirst_name());
+                    pst.setString(3,si.getDepartment());
+                    pst.setString(4,si.getRole());
+                    pst.setString(5,si.getDepartment());
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null,"inserted successfully");
 
                 }
                 catch(Exception ex) {

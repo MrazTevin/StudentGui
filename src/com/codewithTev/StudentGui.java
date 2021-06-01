@@ -3,6 +3,9 @@ package com.codewithTev;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class StudentGui {
@@ -14,6 +17,11 @@ public class StudentGui {
     private JTextField textField5;
     private JButton SAVEButton;
     private JButton DELETEButton;
+
+
+    Connection conn = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
 
 
 

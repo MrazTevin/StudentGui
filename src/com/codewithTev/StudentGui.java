@@ -34,5 +34,12 @@ public class StudentGui {
     public static void main (String [] args) throws SQLException {
         ConnectDb testConnection = new ConnectDb();
         testConnection.connection();
+
+        JFrame frame = new JFrame("StudentGui");
+        frame.setContentPane(new StudentGui().StudentForm);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+
     }
 }
